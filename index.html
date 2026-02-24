@@ -35,7 +35,6 @@
     overflow-x: hidden;
   }
 
-  /* ── HEADER ── */
   header {
     background: linear-gradient(135deg, var(--navy) 0%, var(--blue-dark) 50%, var(--blue-mid) 100%);
     padding: 0 2rem;
@@ -81,10 +80,7 @@
     letter-spacing: 0.5px;
   }
 
-  .cart-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(0,229,255,0.5);
-  }
+  .cart-btn:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(0,229,255,0.5); }
 
   .cart-count {
     background: var(--navy);
@@ -99,7 +95,6 @@
     font-weight: 800;
   }
 
-  /* ── NAV TABS ── */
   nav {
     background: rgba(255,255,255,0.97);
     backdrop-filter: blur(20px);
@@ -120,7 +115,6 @@
     padding: 18px 36px;
     font-family: 'Exo 2', sans-serif;
     font-weight: 600;
-    font-size: 0.95rem;
     color: #4a6080;
     cursor: pointer;
     border: none;
@@ -148,14 +142,11 @@
   .nav-tab:hover { color: var(--blue-light); background: rgba(37,99,235,0.05); }
   .nav-tab.active { color: var(--blue-light); }
   .nav-tab.active::after { transform: scaleX(1); }
-
   .tab-icon { font-size: 1.1rem; }
 
-  /* ── SECTIONS ── */
   .section { display: none; min-height: calc(100vh - 160px); }
   .section.active { display: block; }
 
-  /* ── HERO ── */
   .hero {
     background: linear-gradient(135deg, var(--navy) 0%, var(--blue-dark) 40%, var(--blue-mid) 100%);
     color: white;
@@ -241,7 +232,6 @@
   .stat-num { font-family: 'Exo 2', sans-serif; font-size: 2.5rem; font-weight: 800; color: var(--cyan); }
   .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
 
-  /* ── CATALOG ── */
   #catalogo-section { padding: 50px 2rem; }
 
   .section-title {
@@ -266,7 +256,6 @@
   .filters {
     display: flex;
     gap: 16px;
-    margin-bottom: 36px;
     flex-wrap: wrap;
     background: rgba(255,255,255,0.85);
     backdrop-filter: blur(12px);
@@ -275,9 +264,7 @@
     border: 1px solid rgba(37,99,235,0.12);
     box-shadow: 0 4px 20px rgba(13,34,68,0.08);
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 36px;
+    margin: 0 auto 36px;
   }
 
   .search-box {
@@ -321,7 +308,6 @@
 
   .cat-select:focus { border-color: var(--cyan-soft); }
 
-  /* ── PRODUCTS GRID ── */
   .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -368,17 +354,11 @@
     line-height: 1.3;
   }
 
-  .product-desc {
-    font-size: 0.85rem;
-    color: #5a7494;
-    margin-bottom: 18px;
-    line-height: 1.5;
-  }
+  .product-desc { font-size: 0.85rem; color: #5a7494; margin-bottom: 18px; line-height: 1.5; }
 
   .qty-control {
     display: flex;
     align-items: center;
-    gap: 0;
     background: #f0f8ff;
     border: 1.5px solid rgba(37,99,235,0.2);
     border-radius: 10px;
@@ -432,18 +412,8 @@
     text-transform: uppercase;
   }
 
-  .add-btn:hover {
-    background: linear-gradient(135deg, var(--cyan-soft), var(--blue-light));
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(37,99,235,0.35);
-  }
-
-  .add-btn.added {
-    background: linear-gradient(135deg, #059669, #10b981);
-  }
-
-  /* ── NOSOTROS ── */
-  #nosotros-section { padding: 60px 2rem; max-width: 1100px; margin: 0 auto; }
+  .add-btn:hover { background: linear-gradient(135deg, var(--cyan-soft), var(--blue-light)); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,99,235,0.35); }
+  .add-btn.added { background: linear-gradient(135deg, #059669, #10b981); }
 
   .nosotros-grid {
     display: grid;
@@ -453,27 +423,11 @@
     margin-bottom: 60px;
   }
 
-  @media (max-width: 768px) {
-    .nosotros-grid { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 768px) { .nosotros-grid { grid-template-columns: 1fr; } }
 
-  .nosotros-text h2 {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--navy);
-    margin-bottom: 16px;
-    line-height: 1.2;
-  }
-
+  .nosotros-text h2 { font-family: 'Exo 2', sans-serif; font-size: 2rem; font-weight: 800; color: var(--navy); margin-bottom: 16px; line-height: 1.2; }
   .nosotros-text h2 span { color: var(--blue-light); }
-
-  .nosotros-text p {
-    color: #4a6080;
-    line-height: 1.8;
-    margin-bottom: 16px;
-    font-size: 0.95rem;
-  }
+  .nosotros-text p { color: #4a6080; line-height: 1.8; margin-bottom: 16px; font-size: 0.95rem; }
 
   .nosotros-visual {
     background: linear-gradient(135deg, var(--navy), var(--blue-mid));
@@ -486,22 +440,12 @@
     box-shadow: 0 20px 60px rgba(13,34,68,0.25);
   }
 
-  .nosotros-visual::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 50% 50%, rgba(0,229,255,0.15) 0%, transparent 70%);
-  }
-
+  .nosotros-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(0,229,255,0.15) 0%, transparent 70%); }
   .nosotros-icon { font-size: 5rem; margin-bottom: 16px; position: relative; }
   .nosotros-visual h3 { font-family: 'Exo 2', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--cyan); position: relative; }
   .nosotros-visual p { color: rgba(255,255,255,0.7); position: relative; margin-top: 8px; font-size: 0.9rem; }
 
-  .values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
 
   .value-card {
     background: rgba(255,255,255,0.9);
@@ -513,51 +457,17 @@
     box-shadow: 0 4px 16px rgba(13,34,68,0.07);
   }
 
-  .value-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(0,229,255,0.4);
-    box-shadow: 0 12px 30px rgba(13,34,68,0.12);
-  }
-
+  .value-card:hover { transform: translateY(-4px); border-color: rgba(0,229,255,0.4); box-shadow: 0 12px 30px rgba(13,34,68,0.12); }
   .value-icon { font-size: 2.5rem; margin-bottom: 12px; }
-
-  .value-card h3 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 8px;
-    font-size: 1rem;
-  }
-
+  .value-card h3 { font-family: 'Exo 2', sans-serif; font-weight: 700; color: var(--navy); margin-bottom: 8px; font-size: 1rem; }
   .value-card p { font-size: 0.85rem; color: #5a7494; line-height: 1.6; }
 
-  /* ── CONTACTO ── */
-  #contacto-section { padding: 60px 2rem; max-width: 900px; margin: 0 auto; }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
   @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
 
-  .contact-info h2 {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--navy);
-    margin-bottom: 12px;
-  }
-
+  .contact-info h2 { font-family: 'Exo 2', sans-serif; font-size: 2rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
   .contact-info h2 span { color: var(--blue-light); }
-
-  .contact-info p {
-    color: #4a6080;
-    margin-bottom: 32px;
-    line-height: 1.7;
-    font-size: 0.95rem;
-  }
+  .contact-info p { color: #4a6080; margin-bottom: 32px; line-height: 1.7; font-size: 0.95rem; }
 
   .contact-item {
     display: flex;
@@ -574,556 +484,119 @@
     box-shadow: 0 3px 12px rgba(13,34,68,0.07);
   }
 
-  .contact-item:hover {
-    border-color: rgba(0,229,255,0.4);
-    transform: translateX(4px);
-    box-shadow: 0 8px 24px rgba(13,34,68,0.12);
-  }
+  .contact-item:hover { border-color: rgba(0,229,255,0.4); transform: translateX(4px); box-shadow: 0 8px 24px rgba(13,34,68,0.12); }
 
-  .contact-item-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    flex-shrink: 0;
-  }
-
+  .contact-item-icon { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
   .contact-item-icon.wa { background: linear-gradient(135deg, #25d366, #128c7e); }
   .contact-item-icon.mail { background: linear-gradient(135deg, var(--blue-light), var(--blue-mid)); }
-
   .contact-item-label { font-size: 0.75rem; color: #5a7494; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
   .contact-item-value { font-family: 'Exo 2', sans-serif; font-weight: 600; color: var(--navy); font-size: 0.95rem; }
 
-  .contact-form-card {
-    background: rgba(255,255,255,0.95);
-    border: 1px solid rgba(37,99,235,0.12);
-    border-radius: 20px;
-    padding: 32px 28px;
-    box-shadow: 0 8px 30px rgba(13,34,68,0.1);
-  }
-
-  .contact-form-card h3 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--navy);
-    margin-bottom: 20px;
-  }
+  .contact-form-card { background: rgba(255,255,255,0.95); border: 1px solid rgba(37,99,235,0.12); border-radius: 20px; padding: 32px 28px; box-shadow: 0 8px 30px rgba(13,34,68,0.1); }
+  .contact-form-card h3 { font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 20px; }
 
   .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: #4a6080; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .form-group input, .form-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid rgba(37,99,235,0.2); border-radius: 10px; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--navy); background: white; outline: none; transition: border-color 0.3s; resize: vertical; }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--cyan-soft); box-shadow: 0 0 0 3px rgba(0,188,212,0.1); }
 
-  .form-group label {
-    display: block;
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #4a6080;
-    margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
+  .submit-btn { width: 100%; background: linear-gradient(135deg, var(--blue-mid), var(--blue-light)); color: white; border: none; border-radius: 12px; padding: 14px; font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s; letter-spacing: 0.5px; margin-top: 8px; }
+  .submit-btn:hover { background: linear-gradient(135deg, var(--cyan-soft), var(--blue-light)); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,99,235,0.35); }
 
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1.5px solid rgba(37,99,235,0.2);
-    border-radius: 10px;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    color: var(--navy);
-    background: white;
-    outline: none;
-    transition: border-color 0.3s;
-    resize: vertical;
-  }
-
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: var(--cyan-soft);
-    box-shadow: 0 0 0 3px rgba(0,188,212,0.1);
-  }
-
-  .submit-btn {
-    width: 100%;
-    background: linear-gradient(135deg, var(--blue-mid), var(--blue-light));
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 14px;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    letter-spacing: 0.5px;
-    margin-top: 8px;
-  }
-
-  .submit-btn:hover {
-    background: linear-gradient(135deg, var(--cyan-soft), var(--blue-light));
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(37,99,235,0.35);
-  }
-
-  /* ── CART DRAWER ── */
-  .cart-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(10,22,40,0.7);
-    backdrop-filter: blur(4px);
-    z-index: 2000;
-    animation: fadeIn 0.2s ease;
-  }
-
+  .cart-overlay { display: none; position: fixed; inset: 0; background: rgba(10,22,40,0.7); backdrop-filter: blur(4px); z-index: 2000; animation: fadeIn 0.2s ease; }
   .cart-overlay.open { display: flex; justify-content: flex-end; }
 
-  .cart-drawer {
-    background: white;
-    width: 100%;
-    max-width: 440px;
-    height: 100vh;
-    overflow-y: auto;
-    padding: 0;
-    animation: slideIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    display: flex;
-    flex-direction: column;
-  }
+  .cart-drawer { background: white; width: 100%; max-width: 440px; height: 100vh; overflow-y: auto; animation: slideIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); display: flex; flex-direction: column; }
 
-  .cart-header {
-    background: linear-gradient(135deg, var(--navy), var(--blue-mid));
-    color: white;
-    padding: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-shrink: 0;
-  }
+  .cart-header { background: linear-gradient(135deg, var(--navy), var(--blue-mid)); color: white; padding: 24px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+  .cart-header h2 { font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
 
-  .cart-header h2 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .cart-close {
-    background: rgba(255,255,255,0.15);
-    border: none;
-    color: white;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
+  .cart-close { background: rgba(255,255,255,0.15); border: none; color: white; width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
   .cart-close:hover { background: rgba(255,255,255,0.3); }
 
   .cart-items { flex: 1; padding: 20px; overflow-y: auto; }
 
-  .cart-empty {
-    text-align: center;
-    padding: 60px 20px;
-    color: #8aaccb;
-  }
-
+  .cart-empty { text-align: center; padding: 60px 20px; color: #8aaccb; }
   .cart-empty-icon { font-size: 3rem; margin-bottom: 12px; }
   .cart-empty p { font-size: 0.95rem; }
 
-  .cart-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(37,99,235,0.1);
-  }
-
+  .cart-item { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(37,99,235,0.1); }
   .cart-item-info { flex: 1; }
   .cart-item-name { font-weight: 600; font-size: 0.9rem; color: var(--navy); font-family: 'Exo 2', sans-serif; }
   .cart-item-cat { font-size: 0.75rem; color: #5a7494; margin-top: 2px; }
-  .cart-item-qty {
-    background: linear-gradient(135deg, var(--blue-mid), var(--blue-light));
-    color: white;
-    border-radius: 8px;
-    padding: 4px 12px;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    font-size: 0.85rem;
-    flex-shrink: 0;
-  }
-
-  .cart-item-remove {
-    background: none;
-    border: none;
-    color: #c0d0e0;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 4px;
-    transition: color 0.2s;
-  }
-
+  .cart-item-qty { background: linear-gradient(135deg, var(--blue-mid), var(--blue-light)); color: white; border-radius: 8px; padding: 4px 12px; font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+  .cart-item-remove { background: none; border: none; color: #c0d0e0; cursor: pointer; font-size: 1rem; padding: 4px; transition: color 0.2s; }
   .cart-item-remove:hover { color: #ef4444; }
 
   .cart-footer { padding: 20px; border-top: 1px solid rgba(37,99,235,0.1); flex-shrink: 0; }
 
-  .cart-total-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(37,99,235,0.1);
-    margin-bottom: 16px;
-  }
-
+  .cart-total-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(37,99,235,0.1); margin-bottom: 16px; }
   .cart-total-label { font-family: 'Exo 2', sans-serif; font-weight: 600; color: #4a6080; }
   .cart-total-value { font-family: 'Exo 2', sans-serif; font-weight: 800; color: var(--navy); font-size: 1.1rem; }
 
-  .cotizar-btn {
-    width: 100%;
-    background: linear-gradient(135deg, var(--cyan), var(--cyan-soft));
-    color: var(--navy);
-    border: none;
-    border-radius: 12px;
-    padding: 16px;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 800;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
+  .cotizar-btn { width: 100%; background: linear-gradient(135deg, var(--cyan), var(--cyan-soft)); color: var(--navy); border: none; border-radius: 12px; padding: 16px; font-family: 'Exo 2', sans-serif; font-weight: 800; font-size: 1rem; cursor: pointer; transition: all 0.3s; letter-spacing: 0.5px; text-transform: uppercase; }
+  .cotizar-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-cyan); }
 
-  .cotizar-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-cyan);
-  }
-
-  /* ── QUOTE MODAL ── */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(10,22,40,0.75);
-    backdrop-filter: blur(6px);
-    z-index: 3000;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    animation: fadeIn 0.2s ease;
-  }
-
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(10,22,40,0.75); backdrop-filter: blur(6px); z-index: 3000; align-items: center; justify-content: center; padding: 20px; animation: fadeIn 0.2s ease; }
   .modal-overlay.open { display: flex; }
 
-  .modal-box {
-    background: white;
-    border-radius: 24px;
-    width: 100%;
-    max-width: 520px;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 30px 80px rgba(10,22,40,0.4);
-    animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
+  .modal-box { background: white; border-radius: 24px; width: 100%; max-width: 520px; max-height: 90vh; overflow-y: auto; box-shadow: 0 30px 80px rgba(10,22,40,0.4); animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }
 
-  .modal-header {
-    background: linear-gradient(135deg, var(--navy), var(--blue-mid));
-    color: white;
-    padding: 28px 32px 24px;
-    border-radius: 24px 24px 0 0;
-  }
-
-  .modal-header h2 {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 800;
-    margin-bottom: 4px;
-  }
-
+  .modal-header { background: linear-gradient(135deg, var(--navy), var(--blue-mid)); color: white; padding: 28px 32px 24px; border-radius: 24px 24px 0 0; }
+  .modal-header h2 { font-family: 'Exo 2', sans-serif; font-size: 1.4rem; font-weight: 800; margin-bottom: 4px; }
   .modal-header p { color: rgba(255,255,255,0.65); font-size: 0.85rem; }
 
   .modal-body { padding: 28px 32px; }
 
-  .modal-products-summary {
-    background: #f0f8ff;
-    border: 1px solid rgba(37,99,235,0.15);
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 24px;
-  }
+  .modal-products-summary { background: #f0f8ff; border: 1px solid rgba(37,99,235,0.15); border-radius: 12px; padding: 16px; margin-bottom: 24px; }
+  .modal-products-summary h4 { font-family: 'Exo 2', sans-serif; font-weight: 700; color: var(--navy); margin-bottom: 12px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
 
-  .modal-products-summary h4 {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 12px;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
-  .modal-product-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(37,99,235,0.08);
-    font-size: 0.87rem;
-    color: #3a5a7a;
-  }
-
+  .modal-product-item { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(37,99,235,0.08); font-size: 0.87rem; color: #3a5a7a; }
   .modal-product-item:last-child { border-bottom: none; }
   .modal-product-qty { font-family: 'Exo 2', sans-serif; font-weight: 700; color: var(--blue-light); }
 
   .modal-form-group { margin-bottom: 18px; }
-
-  .modal-form-group label {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #4a6080;
-    margin-bottom: 7px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-
+  .modal-form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: #4a6080; margin-bottom: 7px; text-transform: uppercase; letter-spacing: 0.5px; }
   .modal-form-group label span { color: #ef4444; }
+  .modal-form-group input, .modal-form-group textarea { width: 100%; padding: 12px 14px; border: 1.5px solid rgba(37,99,235,0.2); border-radius: 10px; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--navy); background: white; outline: none; transition: border-color 0.3s; resize: vertical; }
+  .modal-form-group input:focus, .modal-form-group textarea:focus { border-color: var(--cyan-soft); box-shadow: 0 0 0 3px rgba(0,188,212,0.1); }
 
-  .modal-form-group input,
-  .modal-form-group textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1.5px solid rgba(37,99,235,0.2);
-    border-radius: 10px;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    color: var(--navy);
-    background: white;
-    outline: none;
-    transition: border-color 0.3s;
-    resize: vertical;
-  }
+  .modal-submit { width: 100%; background: linear-gradient(135deg, var(--cyan), var(--cyan-soft)); color: var(--navy); border: none; border-radius: 12px; padding: 16px; font-family: 'Exo 2', sans-serif; font-weight: 800; font-size: 1rem; cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px; }
+  .modal-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-cyan); }
 
-  .modal-form-group input:focus,
-  .modal-form-group textarea:focus {
-    border-color: var(--cyan-soft);
-    box-shadow: 0 0 0 3px rgba(0,188,212,0.1);
-  }
-
-  .modal-submit {
-    width: 100%;
-    background: linear-gradient(135deg, var(--cyan), var(--cyan-soft));
-    color: var(--navy);
-    border: none;
-    border-radius: 12px;
-    padding: 16px;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 800;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 8px;
-  }
-
-  .modal-submit:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-cyan);
-  }
-
-  /* ── SUCCESS CARD ── */
-  .success-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(10,22,40,0.8);
-    backdrop-filter: blur(8px);
-    z-index: 4000;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
+  .success-overlay { display: none; position: fixed; inset: 0; background: rgba(10,22,40,0.8); backdrop-filter: blur(8px); z-index: 4000; align-items: center; justify-content: center; padding: 20px; }
   .success-overlay.open { display: flex; }
 
-  .success-card {
-    background: white;
-    border-radius: 28px;
-    padding: 50px 40px;
-    text-align: center;
-    max-width: 460px;
-    width: 100%;
-    box-shadow: 0 30px 80px rgba(10,22,40,0.4);
-    animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    position: relative;
-    overflow: hidden;
-  }
+  .success-card { background: white; border-radius: 28px; padding: 50px 40px; text-align: center; max-width: 460px; width: 100%; box-shadow: 0 30px 80px rgba(10,22,40,0.4); animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); position: relative; overflow: hidden; }
+  .success-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--cyan), var(--blue-light), var(--cyan)); }
 
-  .success-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, var(--cyan), var(--blue-light), var(--cyan));
-  }
+  .success-icon-wrap { width: 90px; height: 90px; background: linear-gradient(135deg, rgba(0,229,255,0.15), rgba(37,99,235,0.1)); border: 3px solid rgba(0,229,255,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; margin: 0 auto 24px; animation: pulse 2s infinite; }
 
-  .success-icon-wrap {
-    width: 90px;
-    height: 90px;
-    background: linear-gradient(135deg, rgba(0,229,255,0.15), rgba(37,99,235,0.1));
-    border: 3px solid rgba(0,229,255,0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.8rem;
-    margin: 0 auto 24px;
-    animation: pulse 2s infinite;
-  }
+  .success-card h2 { font-family: 'Exo 2', sans-serif; font-size: 1.7rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+  .success-card .success-subtitle { color: #5a7494; font-size: 0.95rem; line-height: 1.7; margin-bottom: 28px; }
 
-  .success-card h2 {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.7rem;
-    font-weight: 800;
-    color: var(--navy);
-    margin-bottom: 12px;
-  }
+  .success-ref { background: linear-gradient(135deg, #f0f8ff, #e8f4fd); border: 1px solid rgba(37,99,235,0.15); border-radius: 12px; padding: 16px 20px; margin-bottom: 28px; font-family: 'Exo 2', sans-serif; font-size: 0.85rem; color: #4a6080; }
+  .success-ref .ref-num { font-size: 1.3rem; font-weight: 800; color: var(--blue-light); display: block; margin-bottom: 4px; }
 
-  .success-card .success-subtitle {
-    color: #5a7494;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 28px;
-  }
-
-  .success-ref {
-    background: linear-gradient(135deg, #f0f8ff, #e8f4fd);
-    border: 1px solid rgba(37,99,235,0.15);
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin-bottom: 28px;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 0.85rem;
-    color: #4a6080;
-  }
-
-  .success-ref .ref-num {
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--blue-light);
-    display: block;
-    margin-bottom: 4px;
-  }
-
-  .success-actions {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .success-btn-primary {
-    background: linear-gradient(135deg, var(--cyan), var(--cyan-soft));
-    color: var(--navy);
-    border: none;
-    border-radius: 50px;
-    padding: 12px 28px;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-
+  .success-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .success-btn-primary { background: linear-gradient(135deg, var(--cyan), var(--cyan-soft)); color: var(--navy); border: none; border-radius: 50px; padding: 12px 28px; font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.3s; }
   .success-btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-cyan); }
-
-  .success-btn-secondary {
-    background: rgba(37,99,235,0.1);
-    color: var(--blue-light);
-    border: 1px solid rgba(37,99,235,0.2);
-    border-radius: 50px;
-    padding: 12px 28px;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 700;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-
+  .success-btn-secondary { background: rgba(37,99,235,0.1); color: var(--blue-light); border: 1px solid rgba(37,99,235,0.2); border-radius: 50px; padding: 12px 28px; font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.3s; }
   .success-btn-secondary:hover { background: rgba(37,99,235,0.15); }
 
-  /* ── ADD TO CART TOAST ── */
-  .toast {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    background: linear-gradient(135deg, var(--navy), var(--blue-mid));
-    color: white;
-    border: 1px solid rgba(0,229,255,0.3);
-    border-radius: 16px;
-    padding: 16px 24px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    min-width: 300px;
-    z-index: 5000;
-    box-shadow: 0 8px 30px rgba(10,22,40,0.3), var(--shadow-cyan);
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-
+  .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: linear-gradient(135deg, var(--navy), var(--blue-mid)); color: white; border: 1px solid rgba(0,229,255,0.3); border-radius: 16px; padding: 16px 24px; display: flex; align-items: center; gap: 14px; min-width: 300px; z-index: 5000; box-shadow: 0 8px 30px rgba(10,22,40,0.3), var(--shadow-cyan); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
   .toast.show { transform: translateX(-50%) translateY(0); }
-
-  .toast-icon {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, var(--cyan), var(--cyan-soft));
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    flex-shrink: 0;
-    color: var(--navy);
-    font-weight: 800;
-  }
-
+  .toast-icon { width: 40px; height: 40px; background: linear-gradient(135deg, var(--cyan), var(--cyan-soft)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; color: var(--navy); font-weight: 800; }
   .toast-text .toast-title { font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 0.95rem; }
   .toast-text .toast-sub { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 2px; }
 
-  /* ── FOOTER ── */
-  footer {
-    background: var(--navy);
-    color: rgba(255,255,255,0.6);
-    text-align: center;
-    padding: 30px;
-    font-size: 0.85rem;
-    border-top: 1px solid rgba(0,229,255,0.15);
-  }
-
+  footer { background: var(--navy); color: rgba(255,255,255,0.6); text-align: center; padding: 30px; font-size: 0.85rem; border-top: 1px solid rgba(0,229,255,0.15); }
   footer span { color: var(--cyan); font-weight: 600; }
 
-  /* ── ANIMATIONS ── */
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
   @keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
   @keyframes popIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(0,229,255,0.4); }
-    50% { box-shadow: 0 0 0 15px rgba(0,229,255,0); }
-  }
+  @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(0,229,255,0.4); } 50% { box-shadow: 0 0 0 15px rgba(0,229,255,0); } }
 
   @media (max-width: 600px) {
     .nav-tab { padding: 14px 18px; font-size: 0.72rem; gap: 5px; }
@@ -1137,7 +610,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="logo-wrap" onclick="showTab('inicio')">
     <img src="logo_precision_lap_transparente.png" alt="Precisión Lap" id="logo-img">
@@ -1148,56 +620,33 @@
   </button>
 </header>
 
-<!-- NAV TABS -->
 <nav>
-  <button class="nav-tab active" onclick="showTab('inicio')" id="tab-inicio">
-    <span class="tab-icon">🏠</span> Inicio
-  </button>
-  <button class="nav-tab" onclick="showTab('catalogo')" id="tab-catalogo">
-    <span class="tab-icon">📦</span> Catálogo
-  </button>
-  <button class="nav-tab" onclick="showTab('nosotros')" id="tab-nosotros">
-    <span class="tab-icon">ℹ️</span> Nosotros
-  </button>
-  <button class="nav-tab" onclick="showTab('contacto')" id="tab-contacto">
-    <span class="tab-icon">💬</span> Contacto
-  </button>
+  <button class="nav-tab active" onclick="showTab('inicio')" id="tab-inicio"><span class="tab-icon">🏠</span> Inicio</button>
+  <button class="nav-tab" onclick="showTab('catalogo')" id="tab-catalogo"><span class="tab-icon">📦</span> Catálogo</button>
+  <button class="nav-tab" onclick="showTab('nosotros')" id="tab-nosotros"><span class="tab-icon">ℹ️</span> Nosotros</button>
+  <button class="nav-tab" onclick="showTab('contacto')" id="tab-contacto"><span class="tab-icon">💬</span> Contacto</button>
 </nav>
 
-<!-- INICIO -->
 <section id="inicio-section" class="section active">
   <div class="hero">
     <div class="hero-content">
       <div class="hero-badge">Equipo Médico Especializado</div>
       <h1>Tecnología Quirúrgica<br>de <span>Precisión</span></h1>
       <p>Distribuimos equipo laparoscópico e histeroscópico de alta calidad para instituciones médicas. Cotiza de manera rápida y segura.</p>
-      <button class="hero-cta" onclick="showTab('catalogo')">
-        Ver Catálogo Completo →
-      </button>
+      <button class="hero-cta" onclick="showTab('catalogo')">Ver Catálogo Completo →</button>
       <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-num">200+</div>
-          <div class="stat-label">Productos</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">50+</div>
-          <div class="stat-label">Instituciones</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">24h</div>
-          <div class="stat-label">Respuesta</div>
-        </div>
+        <div class="stat"><div class="stat-num">200+</div><div class="stat-label">Productos</div></div>
+        <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Instituciones</div></div>
+        <div class="stat"><div class="stat-num">24h</div><div class="stat-label">Respuesta</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CATÁLOGO -->
 <section id="catalogo-section" class="section">
   <div style="padding: 50px 2rem;">
     <div class="section-title">Nuestro <span>Catálogo</span></div>
     <div class="title-line"></div>
-
     <div class="filters">
       <div class="search-box">
         <span>🔍</span>
@@ -1212,17 +661,14 @@
         <option value="Contenedores">Contenedores</option>
       </select>
     </div>
-
     <div class="products-grid" id="productsGrid"></div>
   </div>
 </section>
 
-<!-- NOSOTROS -->
 <section id="nosotros-section" class="section">
   <div style="padding: 60px 2rem; max-width: 1100px; margin: 0 auto;">
     <div class="section-title">Sobre <span>Nosotros</span></div>
     <div class="title-line"></div>
-
     <div class="nosotros-grid">
       <div class="nosotros-text">
         <h2>Líderes en <span>Equipo Laparoscópico</span> de Alta Precisión</h2>
@@ -1236,85 +682,45 @@
         <p>Tecnología de vanguardia para la medicina moderna</p>
       </div>
     </div>
-
     <div class="values-grid">
-      <div class="value-card">
-        <div class="value-icon">🎯</div>
-        <h3>Precisión</h3>
-        <p>Cada producto seleccionado cumple con los más altos estándares de calidad quirúrgica.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">🛡️</div>
-        <h3>Confiabilidad</h3>
-        <p>Respaldo técnico y garantía en todos nuestros equipos y accesorios.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">⚡</div>
-        <h3>Rapidez</h3>
-        <p>Atención y cotización en menos de 24 horas para todas las instituciones.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-icon">🤝</div>
-        <h3>Servicio</h3>
-        <p>Acompañamos al cliente en todo el proceso, desde la cotización hasta la entrega.</p>
-      </div>
+      <div class="value-card"><div class="value-icon">🎯</div><h3>Precisión</h3><p>Cada producto seleccionado cumple con los más altos estándares de calidad quirúrgica.</p></div>
+      <div class="value-card"><div class="value-icon">🛡️</div><h3>Confiabilidad</h3><p>Respaldo técnico y garantía en todos nuestros equipos y accesorios.</p></div>
+      <div class="value-card"><div class="value-icon">⚡</div><h3>Rapidez</h3><p>Atención y cotización en menos de 24 horas para todas las instituciones.</p></div>
+      <div class="value-card"><div class="value-icon">🤝</div><h3>Servicio</h3><p>Acompañamos al cliente en todo el proceso, desde la cotización hasta la entrega.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACTO -->
 <section id="contacto-section" class="section">
   <div style="padding: 60px 2rem; max-width: 900px; margin: 0 auto;">
     <div class="section-title">Ponerse en <span>Contacto</span></div>
     <div class="title-line"></div>
-
     <div class="contact-grid">
       <div class="contact-info">
         <h2>¿Listo para <span>Cotizar?</span></h2>
         <p>Contáctanos directamente o utiliza nuestro sistema de cotización en línea. Respondemos en menos de 24 horas.</p>
-
         <a href="https://wa.me/523327963109" target="_blank" class="contact-item">
           <div class="contact-item-icon wa">💬</div>
-          <div>
-            <div class="contact-item-label">WhatsApp</div>
-            <div class="contact-item-value">+52 33 2796 3109</div>
-          </div>
+          <div><div class="contact-item-label">WhatsApp</div><div class="contact-item-value">+52 33 2796 3109</div></div>
         </a>
-
-        <a href="/cdn-cgi/l/email-protection#bbdacec8cfc9d2dadacedfd2d4cdd2c8cedad7fbdcd6dad2d795d8d4d6" class="contact-item">
+        <a href="mailto:ventas@precisionlap.mx" class="contact-item">
           <div class="contact-item-icon mail">✉️</div>
-          <div>
-            <div class="contact-item-label">Correo Electrónico</div>
-            <div class="contact-item-value"><span class="__cf_email__" data-cfemail="5233272126203b333327363b3d243b2127333e12353f333b3e7c313d3f">[email&#160;protected]</span></div>
-          </div>
+          <div><div class="contact-item-label">Correo Electrónico</div><div class="contact-item-value">ventas@precisionlap.mx</div></div>
         </a>
       </div>
-
       <div class="contact-form-card">
         <h3>💬 Envía un Mensaje</h3>
-        <div class="form-group">
-          <label>Nombre completo</label>
-          <input type="text" id="c-nombre" placeholder="Dr. Juan Pérez">
-        </div>
-        <div class="form-group">
-          <label>Correo electrónico</label>
-          <input type="email" id="c-email" placeholder="doctor@hospital.com">
-        </div>
-        <div class="form-group">
-          <label>Mensaje</label>
-          <textarea id="c-mensaje" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
-        </div>
+        <div class="form-group"><label>Nombre completo</label><input type="text" id="c-nombre" placeholder="Dr. Juan Pérez"></div>
+        <div class="form-group"><label>Correo electrónico</label><input type="email" id="c-email" placeholder="doctor@hospital.com"></div>
+        <div class="form-group"><label>Mensaje</label><textarea id="c-mensaje" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea></div>
         <button class="submit-btn" onclick="enviarMensajeContacto()">Enviar Mensaje →</button>
       </div>
     </div>
   </div>
 </section>
 
-<footer>
-  © 2025 <span>Precisión Lap</span> — Visión a Profundidad. Todos los derechos reservados.
-</footer>
+<footer>© 2025 <span>Precisión Lap</span> — Visión a Profundidad. Todos los derechos reservados.</footer>
 
-<!-- CART DRAWER -->
 <div class="cart-overlay" id="cartOverlay" onclick="closeCartOnBg(event)">
   <div class="cart-drawer">
     <div class="cart-header">
@@ -1322,10 +728,7 @@
       <button class="cart-close" onclick="closeCart()">✕</button>
     </div>
     <div class="cart-items" id="cartItems">
-      <div class="cart-empty">
-        <div class="cart-empty-icon">📋</div>
-        <p>Tu cotización está vacía.<br>Agrega productos del catálogo.</p>
-      </div>
+      <div class="cart-empty"><div class="cart-empty-icon">📋</div><p>Tu cotización está vacía.<br>Agrega productos del catálogo.</p></div>
     </div>
     <div class="cart-footer" id="cartFooter" style="display:none;">
       <div class="cart-total-row">
@@ -1337,7 +740,6 @@
   </div>
 </div>
 
-<!-- QUOTE MODAL -->
 <div class="modal-overlay" id="quoteModal">
   <div class="modal-box">
     <div class="modal-header">
@@ -1349,36 +751,16 @@
         <h4>📦 Productos Seleccionados</h4>
         <div id="modalProductList"></div>
       </div>
-
-      <div class="modal-form-group">
-        <label>Nombre Completo <span>*</span></label>
-        <input type="text" id="q-nombre" placeholder="Dr. Juan García">
-      </div>
-      <div class="modal-form-group">
-        <label>Institución / Hospital</label>
-        <input type="text" id="q-institucion" placeholder="Hospital General...">
-      </div>
-      <div class="modal-form-group">
-        <label>Correo Electrónico <span>*</span></label>
-        <input type="email" id="q-email" placeholder="medico@hospital.com">
-      </div>
-      <div class="modal-form-group">
-        <label>WhatsApp</label>
-        <input type="tel" id="q-whatsapp" placeholder="33 1234 5678">
-      </div>
-      <div class="modal-form-group">
-        <label>Notas Adicionales</label>
-        <textarea id="q-notas" rows="3" placeholder="Urgencia, especificaciones, cantidad de procedimientos, etc."></textarea>
-      </div>
-
-      <button class="modal-submit" onclick="enviarCotizacion()">
-        🚀 Enviar Cotización
-      </button>
+      <div class="modal-form-group"><label>Nombre Completo <span>*</span></label><input type="text" id="q-nombre" placeholder="Dr. Juan García"></div>
+      <div class="modal-form-group"><label>Institución / Hospital</label><input type="text" id="q-institucion" placeholder="Hospital General..."></div>
+      <div class="modal-form-group"><label>Correo Electrónico <span>*</span></label><input type="email" id="q-email" placeholder="medico@hospital.com"></div>
+      <div class="modal-form-group"><label>WhatsApp</label><input type="tel" id="q-whatsapp" placeholder="33 1234 5678"></div>
+      <div class="modal-form-group"><label>Notas Adicionales</label><textarea id="q-notas" rows="3" placeholder="Urgencia, especificaciones, cantidad de procedimientos, etc."></textarea></div>
+      <button class="modal-submit" onclick="enviarCotizacion()">🚀 Enviar Cotización</button>
     </div>
   </div>
 </div>
 
-<!-- SUCCESS CARD -->
 <div class="success-overlay" id="successOverlay">
   <div class="success-card">
     <div class="success-icon-wrap">✅</div>
@@ -1388,9 +770,7 @@
       <span class="ref-num" id="successRefNum">#PL-000000</span>
       Número de referencia de tu cotización
     </div>
-    <p style="font-size:0.82rem; color:#8aaccb; margin-bottom:20px;">
-      Recibirás confirmación al correo proporcionado.<br>También nos comunicaremos por WhatsApp si lo indicaste.
-    </p>
+    <p style="font-size:0.82rem; color:#8aaccb; margin-bottom:20px;">Recibirás confirmación al correo proporcionado.<br>También nos comunicaremos por WhatsApp si lo indicaste.</p>
     <div class="success-actions">
       <button class="success-btn-primary" onclick="closeSuccess()">Ver Catálogo</button>
       <button class="success-btn-secondary" onclick="whatsappDirect()">💬 Contactar Ahora</button>
@@ -1398,7 +778,6 @@
   </div>
 </div>
 
-<!-- ADD TOAST -->
 <div class="toast" id="addToast">
   <div class="toast-icon">+</div>
   <div class="toast-text">
@@ -1407,8 +786,7 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// ── PRODUCTS DATA ──
+<script>
 const products = [
   {id:1,name:'Aguja de Veress Reusable 2.2 x 110 mm',cat:'Instrumental',desc:'Aguja de Veress Reusable 2.2 x 110 mm'},
   {id:2,name:'Aguja de Veress Reusable 2.2 x 120 mm',cat:'Instrumental',desc:'Aguja de Veress Reusable 2.2 x 120 mm'},
@@ -1482,13 +860,13 @@ const products = [
   {id:70,name:'Pinza de Agarre TC Collin (10mm) - 40 mm',cat:'Instrumental',desc:'Pinza de Agarre TC Collin (10mm) - 40 mm'},
   {id:71,name:'Pinza de Agarre TC Collin 40 mm',cat:'Instrumental',desc:'Pinza de Agarre TC Collin 40 mm'},
   {id:72,name:'Pinza para Biopsia 14 mm',cat:'Instrumental',desc:'Pinza para Biopsia 14 mm'},
-  {id:73,name:'Porta Agujas Recto forma de <<O>> (MINILAP) 3 x 280 mm',cat:'Instrumental',desc:'Porta Agujas Recto forma de <<O>> (MINILAP) 3 x 280 mm'},
+  {id:73,name:'Porta Agujas Recto forma de O (MINILAP) 3 x 280 mm',cat:'Instrumental',desc:'Porta Agujas Recto forma de O (MINILAP) 3 x 280 mm'},
   {id:74,name:'Porta Agujas Toracoscópico Curvo',cat:'Instrumental',desc:'Porta Agujas Toracoscópico Curvo'},
   {id:75,name:'Porta Agujas Toracoscópico Recto',cat:'Instrumental',desc:'Porta Agujas Toracoscópico Recto'},
-  {id:76,name:'Porta Agujas en forma de <<V>> (SILS) 5 x 410 mm',cat:'Instrumental',desc:'Porta Agujas en forma de <<V>> (SILS) 5 x 410 mm'},
+  {id:76,name:'Porta Agujas en forma de V (SILS) 5 x 410 mm',cat:'Instrumental',desc:'Porta Agujas en forma de V (SILS) 5 x 410 mm'},
   {id:77,name:'Porta Agujas: Mango Curvo Self-righting',cat:'Instrumental',desc:'Porta Agujas: Mango Curvo Self-righting'},
   {id:78,name:'Tijera Curva Desechable',cat:'Instrumental',desc:'Tijera Curva Desechable'},
-  {id:79,name:'Tijera Curva Desechable',cat:'Instrumental',desc:'Tijera Curva Desechable'},
+  {id:79,name:'Tijera Curva Desechable (2)',cat:'Instrumental',desc:'Tijera Curva Desechable'},
   {id:80,name:'Tijera Curva Doble Acción 15 mm',cat:'Instrumental',desc:'Tijera Curva Doble Acción 15 mm'},
   {id:81,name:'Tijera Metzenbaum Curva 25 mm',cat:'Instrumental',desc:'Tijera Metzenbaum Curva 25 mm'},
   {id:82,name:'Tijera Metzenbaum Curva Toracoscópica',cat:'Instrumental',desc:'Tijera Metzenbaum Curva Toracoscópica'},
@@ -1509,26 +887,21 @@ const products = [
   {id:97,name:'Trocar con Tapón de Silicon (MINILAP) 3 x 95 mm',cat:'Instrumental',desc:'Trocar con Tapón de Silicon (MINILAP) 3 x 95 mm'}
 ];
 
-
-
-// ── CONFIGURACIÓN GOOGLE FORMS ──
+// ── CONFIGURACIÓN GOOGLE FORMS — URL CORREGIDA ──
 const FORM_CONFIG = {
-  ACTION_URL: 'https://docs.google.com/forms/d/e/1FAIpQLSfS4yQs9zmklOSwYBmQuUH_u3FRD_IZapwSlucffvtcBaVS1w/formResponse',
+  ACTION_URL: 'https://docs.google.com/forms/d/e/1FAIpQLSfS4yQs9zmkIOSwYBmQuUH_u3FRD_IZapwSlucffvtcBaVS1w/formResponse',
   ENTRY_NOMBRE: 'entry.751678926',
-  ENTRY_INST: 'entry.1415173915',
-  ENTRY_EMAIL: 'entry.1109951394',
-  ENTRY_WA: 'entry.1574051229',
-  ENTRY_PRODS: 'entry.516505872',
-  ENTRY_NOTAS: 'entry.250756196'
+  ENTRY_INST:   'entry.1415173915',
+  ENTRY_EMAIL:  'entry.1109951394',
+  ENTRY_WA:     'entry.1574051229',
+  ENTRY_PRODS:  'entry.516505872',
+  ENTRY_NOTAS:  'entry.250756196'
 };
 
 let cart = {};
 let quantities = {};
-
-// Init quantities
 products.forEach(p => { quantities[p.id] = 0; });
 
-// ── TABS ──
 function showTab(tab) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -1537,14 +910,10 @@ function showTab(tab) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── RENDER PRODUCTS ──
 function renderProducts(list) {
   const grid = document.getElementById('productsGrid');
   if (list.length === 0) {
-    grid.innerHTML = `<div style="text-align:center;padding:60px;color:#5a7494;grid-column:1/-1;">
-      <div style="font-size:3rem;margin-bottom:12px;">🔍</div>
-      <p style="font-size:1rem;">No se encontraron productos.</p>
-    </div>`;
+    grid.innerHTML = `<div style="text-align:center;padding:60px;color:#5a7494;grid-column:1/-1;"><div style="font-size:3rem;margin-bottom:12px;">🔍</div><p>No se encontraron productos.</p></div>`;
     return;
   }
   grid.innerHTML = list.map(p => `
@@ -1558,9 +927,7 @@ function renderProducts(list) {
           <span class="qty-num" id="qty-${p.id}">${quantities[p.id]}</span>
           <button class="qty-btn" onclick="changeQty(${p.id}, 1)">+</button>
         </div>
-        <button class="add-btn" id="addbtn-${p.id}" onclick="addToCart(${p.id})">
-          + Agregar a Cotización
-        </button>
+        <button class="add-btn" id="addbtn-${p.id}" onclick="addToCart(${p.id})">+ Agregar a Cotización</button>
       </div>
     </div>
   `).join('');
@@ -1570,57 +937,42 @@ function filterProducts() {
   const q = document.getElementById('searchInput').value.toLowerCase();
   const cat = document.getElementById('catFilter').value;
   const filtered = products.filter(p => {
-    const matchQ = !q || p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q);
+    const matchQ = !q || p.name.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q);
     const matchC = !cat || p.cat === cat;
     return matchQ && matchC;
   });
   renderProducts(filtered);
 }
 
-// ── QTY ──
 function changeQty(id, delta) {
   quantities[id] = Math.max(0, (quantities[id] || 0) + delta);
   const el = document.getElementById('qty-' + id);
   if (el) el.textContent = quantities[id];
 }
 
-// ── ADD TO CART ──
 function addToCart(id) {
-  const qty = quantities[id] || 0;
-  if (qty === 0) {
+  if (!quantities[id] || quantities[id] === 0) {
     quantities[id] = 1;
     const el = document.getElementById('qty-' + id);
     if (el) el.textContent = 1;
   }
   const finalQty = quantities[id];
   const product = products.find(p => p.id === id);
-
-  if (cart[id]) {
-    cart[id].qty = finalQty;
-  } else {
-    cart[id] = { ...product, qty: finalQty };
-  }
-
+  cart[id] = { ...product, qty: finalQty };
   updateCartCount();
   showToast(product.name, finalQty);
-
   const btn = document.getElementById('addbtn-' + id);
   if (btn) {
     btn.textContent = '✓ En Cotización';
     btn.classList.add('added');
-    setTimeout(() => {
-      btn.textContent = '+ Agregar a Cotización';
-      btn.classList.remove('added');
-    }, 2000);
+    setTimeout(() => { btn.textContent = '+ Agregar a Cotización'; btn.classList.remove('added'); }, 2000);
   }
 }
 
 function updateCartCount() {
-  const total = Object.values(cart).reduce((s, i) => s + i.qty, 0);
-  document.getElementById('cartCount').textContent = total;
+  document.getElementById('cartCount').textContent = Object.values(cart).reduce((s, i) => s + i.qty, 0);
 }
 
-// ── TOAST ──
 function showToast(name, qty) {
   const toast = document.getElementById('addToast');
   document.getElementById('toastTitle').textContent = name;
@@ -1629,37 +981,21 @@ function showToast(name, qty) {
   setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
-// ── CART ──
-function openCart() {
-  renderCartItems();
-  document.getElementById('cartOverlay').classList.add('open');
-}
-
-function closeCart() {
-  document.getElementById('cartOverlay').classList.remove('open');
-}
-
-function closeCartOnBg(e) {
-  if (e.target === document.getElementById('cartOverlay')) closeCart();
-}
+function openCart() { renderCartItems(); document.getElementById('cartOverlay').classList.add('open'); }
+function closeCart() { document.getElementById('cartOverlay').classList.remove('open'); }
+function closeCartOnBg(e) { if (e.target === document.getElementById('cartOverlay')) closeCart(); }
 
 function renderCartItems() {
   const items = Object.values(cart);
   const container = document.getElementById('cartItems');
   const footer = document.getElementById('cartFooter');
-
   if (items.length === 0) {
-    container.innerHTML = `<div class="cart-empty">
-      <div class="cart-empty-icon">📋</div>
-      <p>Tu cotización está vacía.<br>Agrega productos del catálogo.</p>
-    </div>`;
+    container.innerHTML = `<div class="cart-empty"><div class="cart-empty-icon">📋</div><p>Tu cotización está vacía.<br>Agrega productos del catálogo.</p></div>`;
     footer.style.display = 'none';
     return;
   }
-
   const totalQty = items.reduce((s, i) => s + i.qty, 0);
   document.getElementById('cartTotal').textContent = `${totalQty} artículo${totalQty > 1 ? 's' : ''}`;
-
   container.innerHTML = items.map(item => `
     <div class="cart-item">
       <div class="cart-item-info">
@@ -1670,41 +1006,27 @@ function renderCartItems() {
       <button class="cart-item-remove" onclick="removeFromCart(${item.id})">🗑</button>
     </div>
   `).join('');
-
   footer.style.display = 'block';
 }
 
-function removeFromCart(id) {
-  delete cart[id];
-  updateCartCount();
-  renderCartItems();
-}
+function removeFromCart(id) { delete cart[id]; updateCartCount(); renderCartItems(); }
 
-// ── QUOTE MODAL ──
 function openQuoteModal() {
   const items = Object.values(cart);
   if (items.length === 0) return;
-
   document.getElementById('modalProductList').innerHTML = items.map(i => `
-    <div class="modal-product-item">
-      <span>${i.name}</span>
-      <span class="modal-product-qty">x${i.qty}</span>
-    </div>
+    <div class="modal-product-item"><span>${i.name}</span><span class="modal-product-qty">x${i.qty}</span></div>
   `).join('');
-
   closeCart();
   document.getElementById('quoteModal').classList.add('open');
 }
 
-function closeQuoteModal() {
-  document.getElementById('quoteModal').classList.remove('open');
-}
+function closeQuoteModal() { document.getElementById('quoteModal').classList.remove('open'); }
 
 document.getElementById('quoteModal').addEventListener('click', function(e) {
   if (e.target === this) closeQuoteModal();
 });
 
-// ── SEND QUOTE ──
 async function enviarCotizacion() {
   const nombre = document.getElementById('q-nombre').value.trim();
   const email = document.getElementById('q-email').value.trim();
@@ -1712,97 +1034,61 @@ async function enviarCotizacion() {
   const whatsapp = document.getElementById('q-whatsapp').value.trim();
   const notas = document.getElementById('q-notas').value.trim();
 
-  if (!nombre || !email) {
-    alert('Por favor completa nombre y correo electrónico.');
-    return;
-  }
+  if (!nombre || !email) { alert('Por favor completa nombre y correo electrónico.'); return; }
 
   const items = Object.values(cart);
   const refNum = '#PL-' + Date.now().toString().slice(-6);
   const fechaHora = new Date().toLocaleString('es-MX');
-
-  // Build product list string
   const productosStr = items.map(i => `• ${i.name} (x${i.qty})`).join('\n');
 
-  // ── ENVIAR A GOOGLE FORMS (REGISTRAR EN SHEETS Y ENVIAR EMAILS AUTOMÁTICOS) ──
   const formData = new FormData();
   formData.append(FORM_CONFIG.ENTRY_NOMBRE, nombre);
-  formData.append(FORM_CONFIG.ENTRY_INST, institucion || 'No indicada');
-  formData.append(FORM_CONFIG.ENTRY_EMAIL, email);
-  formData.append(FORM_CONFIG.ENTRY_WA, whatsapp || 'No indicado');
-  formData.append(FORM_CONFIG.ENTRY_PRODS, productosStr);
-  formData.append(FORM_CONFIG.ENTRY_NOTAS, notas || 'Ninguna');
+  formData.append(FORM_CONFIG.ENTRY_INST,   institucion || 'No indicada');
+  formData.append(FORM_CONFIG.ENTRY_EMAIL,  email);
+  formData.append(FORM_CONFIG.ENTRY_WA,     whatsapp || 'No indicado');
+  formData.append(FORM_CONFIG.ENTRY_PRODS,  productosStr);
+  formData.append(FORM_CONFIG.ENTRY_NOTAS,  notas || 'Ninguna');
 
   try {
-    // Enviar a Google Forms (esto registra en Sheets y dispara el trigger de Apps Script que envía los emails)
-    await fetch(FORM_CONFIG.ACTION_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: formData
-    });
-    
-    console.log('✅ Cotización enviada a Google Sheets');
+    await fetch(FORM_CONFIG.ACTION_URL, { method: 'POST', mode: 'no-cors', body: formData });
+    console.log('✅ Enviado a Google Sheets');
   } catch (error) {
-    console.error('Error al enviar a Google Forms:', error);
-    alert('Hubo un error al registrar la cotización. Por favor intenta de nuevo.');
+    console.error('Error:', error);
+    alert('Hubo un error al registrar. Por favor intenta de nuevo.');
     return;
   }
 
-  // ── WHATSAPP ──
   const waText = encodeURIComponent(
-    `📋 *NUEVA SOLICITUD DE COTIZACIÓN*\n` +
-    `_Precisión Lap — ${fechaHora}_\n\n` +
-    `*Referencia:* ${refNum}\n` +
-    `*Cliente:* ${nombre}\n` +
-    `*Institución:* ${institucion || 'No indicada'}\n` +
-    `*Email:* ${email}\n` +
-    `*WhatsApp cliente:* ${whatsapp || 'No indicado'}\n\n` +
-    `*🛒 Productos solicitados:*\n${productosStr}\n\n` +
-    `*Notas:* ${notas || 'Ninguna'}`
+    `📋 *NUEVA SOLICITUD DE COTIZACIÓN*\n_Precisión Lap — ${fechaHora}_\n\n` +
+    `*Referencia:* ${refNum}\n*Cliente:* ${nombre}\n*Institución:* ${institucion || 'No indicada'}\n` +
+    `*Email:* ${email}\n*WhatsApp cliente:* ${whatsapp || 'No indicado'}\n\n` +
+    `*🛒 Productos solicitados:*\n${productosStr}\n\n*Notas:* ${notas || 'Ninguna'}`
   );
   window.open(`https://wa.me/523327963109?text=${waText}`, '_blank');
 
-  // Close modal & show success
   closeQuoteModal();
   document.getElementById('successRefNum').textContent = refNum;
   document.getElementById('successOverlay').classList.add('open');
-
-  // Clear cart
   cart = {};
   updateCartCount();
 }
 
-function closeSuccess() {
-  document.getElementById('successOverlay').classList.remove('open');
-  showTab('catalogo');
-}
+function closeSuccess() { document.getElementById('successOverlay').classList.remove('open'); showTab('catalogo'); }
+function whatsappDirect() { window.open('https://wa.me/523327963109', '_blank'); closeSuccess(); }
 
-function whatsappDirect() {
-  window.open('https://wa.me/523327963109', '_blank');
-  closeSuccess();
-}
-
-// ── CONTACT FORM ──
 function enviarMensajeContacto() {
   const nombre = document.getElementById('c-nombre').value.trim();
   const email = document.getElementById('c-email').value.trim();
   const mensaje = document.getElementById('c-mensaje').value.trim();
-
-  if (!nombre || !email) {
-    alert('Por favor completa nombre y correo.');
-    return;
-  }
-
+  if (!nombre || !email) { alert('Por favor completa nombre y correo.'); return; }
   const waText = encodeURIComponent(`💬 Mensaje desde el sitio web:\n\nNombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`);
   window.open(`https://wa.me/523327963109?text=${waText}`, '_blank');
-
   document.getElementById('c-nombre').value = '';
   document.getElementById('c-email').value = '';
   document.getElementById('c-mensaje').value = '';
   alert('¡Mensaje enviado por WhatsApp!');
 }
 
-// ── INIT ──
 document.addEventListener('DOMContentLoaded', function() {
   renderProducts(products);
   showTab('inicio');
