@@ -1794,4 +1794,19 @@ function enviarMensajeContacto() {
   }
 
   const waText = encodeURIComponent(`💬 Mensaje desde el sitio web:\n\nNombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`);
-  window.open(`https://wa.me/52332796
+  window.open(`https://wa.me/523327963109?text=${waText}`, '_blank');
+
+  document.getElementById('c-nombre').value = '';
+  document.getElementById('c-email').value = '';
+  document.getElementById('c-mensaje').value = '';
+  alert('¡Mensaje enviado por WhatsApp!');
+}
+
+// ── INIT ──
+document.addEventListener('DOMContentLoaded', function() {
+  renderProducts(products);
+  showTab('inicio');
+});
+</script>
+</body>
+</html>
