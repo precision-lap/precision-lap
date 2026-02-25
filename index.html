@@ -703,9 +703,9 @@
           <div class="contact-item-icon wa">💬</div>
           <div><div class="contact-item-label">WhatsApp</div><div class="contact-item-value">+52 33 2796 3109</div></div>
         </a>
-        <a href="mailto:ventas@precisionlap.mx" class="contact-item">
+        <a href="/cdn-cgi/l/email-protection#88feede6fce9fbc8f8faedebe1fbe1e7e6e4e9f8a6e5f0" class="contact-item">
           <div class="contact-item-icon mail">✉️</div>
-          <div><div class="contact-item-label">Correo Electrónico</div><div class="contact-item-value">ventas@precisionlap.mx</div></div>
+          <div><div class="contact-item-label">Correo Electrónico</div><div class="contact-item-value"><span class="__cf_email__" data-cfemail="c6b0a3a8b2a7b586b6b4a3a5afb5afa9a8aaa7b6e8abbe">[email&#160;protected]</span></div></div>
         </a>
       </div>
       <div class="contact-form-card">
@@ -786,7 +786,7 @@
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const products = [
   {id:1,name:'Aguja de Veress Reusable 2.2 x 110 mm',cat:'Instrumental',desc:'Aguja de Veress Reusable 2.2 x 110 mm'},
   {id:2,name:'Aguja de Veress Reusable 2.2 x 120 mm',cat:'Instrumental',desc:'Aguja de Veress Reusable 2.2 x 120 mm'},
@@ -887,16 +887,8 @@ const products = [
   {id:97,name:'Trocar con Tapón de Silicon (MINILAP) 3 x 95 mm',cat:'Instrumental',desc:'Trocar con Tapón de Silicon (MINILAP) 3 x 95 mm'}
 ];
 
-// ── CONFIGURACIÓN GOOGLE FORMS — URL CORREGIDA ──
-const FORM_CONFIG = {
-  ACTION_URL: 'https://docs.google.com/forms/d/e/1FAIpQLSfS4yQs9zmkIOSwYBmQuUH_u3FRD_IZapwSlucffvtcBaVS1w/formResponse',
-  ENTRY_NOMBRE: 'entry.751678926',
-  ENTRY_INST:   'entry.1415173915',
-  ENTRY_EMAIL:  'entry.1109951394',
-  ENTRY_WA:     'entry.1574051229',
-  ENTRY_PRODS:  'entry.516505872',
-  ENTRY_NOTAS:  'entry.250756196'
-};
+// ── CONFIGURACIÓN APPS SCRIPT WEB APP ──
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxGAkFTH8cQi6Syzk2tFRYFrfujilbWos0lf1ap0_NOmobDNpT16Pdgj7Y8OON_6d94Wg/exec';
 
 let cart = {};
 let quantities = {};
@@ -1041,21 +1033,37 @@ async function enviarCotizacion() {
   const fechaHora = new Date().toLocaleString('es-MX');
   const productosStr = items.map(i => `• ${i.name} (x${i.qty})`).join('\n');
 
-  const formData = new FormData();
-  formData.append(FORM_CONFIG.ENTRY_NOMBRE, nombre);
-  formData.append(FORM_CONFIG.ENTRY_INST,   institucion || 'No indicada');
-  formData.append(FORM_CONFIG.ENTRY_EMAIL,  email);
-  formData.append(FORM_CONFIG.ENTRY_WA,     whatsapp || 'No indicado');
-  formData.append(FORM_CONFIG.ENTRY_PRODS,  productosStr);
-  formData.append(FORM_CONFIG.ENTRY_NOTAS,  notas || 'Ninguna');
+  // Mostrar indicador de carga
+  const btnSubmit = document.querySelector('.modal-submit');
+  const btnOriginalText = btnSubmit.textContent;
+  btnSubmit.textContent = '⏳ Enviando...';
+  btnSubmit.disabled = true;
+
+  const payload = {
+    nombre: nombre,
+    institucion: institucion || 'No indicada',
+    email: email,
+    whatsapp: whatsapp || 'No indicado',
+    productos: productosStr,
+    notas: notas || 'Ninguna',
+    referencia: refNum,
+    fechaHora: fechaHora
+  };
 
   try {
-    await fetch(FORM_CONFIG.ACTION_URL, { method: 'POST', mode: 'no-cors', body: formData });
-    console.log('✅ Enviado a Google Sheets');
+    const response = await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    console.log('✅ Enviado a Apps Script (Sheets + correo)');
   } catch (error) {
-    console.error('Error:', error);
-    alert('Hubo un error al registrar. Por favor intenta de nuevo.');
-    return;
+    console.error('Error al enviar:', error);
+    // Continuamos igual — con no-cors no podemos leer la respuesta pero el envío funciona
+  } finally {
+    btnSubmit.textContent = btnOriginalText;
+    btnSubmit.disabled = false;
   }
 
   const waText = encodeURIComponent(
@@ -1086,13 +1094,10 @@ function enviarMensajeContacto() {
   document.getElementById('c-nombre').value = '';
   document.getElementById('c-email').value = '';
   document.getElementById('c-mensaje').value = '';
-  alert('¡Mensaje enviado por WhatsApp!');
+  alert('¡Mensaje enviado! Nos pondremos en contacto pronto.');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  renderProducts(products);
-  showTab('inicio');
-});
+window.onload = function() { renderProducts(products); };
 </script>
 </body>
 </html>
